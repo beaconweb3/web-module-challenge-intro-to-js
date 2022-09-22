@@ -20,7 +20,10 @@ Do the following:
    HINT: no function required
 */
 
-
+let votingAge = 21;
+if (votingAge > 18) {
+  console.log('true');
+}
 
 /*
 Task 1b - Values (not auto tested)
@@ -34,6 +37,14 @@ Do the following:
    HINT: no function required
 */
 
+let Pain = 1;
+let Gain = 0; 
+if (Pain <= Gain) {
+  Pain =  'No Pain No Gain';
+  console.log(Pain); 
+} else {
+  console.log('Get them Gains');
+}
 
 
 
@@ -48,6 +59,15 @@ Do the following:
 
    HINT: look up the Number method
 */
+
+let switchNum = '1999';
+
+switchNum = Number(switchNum);
+if (switchNum === 1999) {
+  console.log(switchNum.valueOf());
+} else {
+  console.log("Didn't Work");
+}
 
 
 
