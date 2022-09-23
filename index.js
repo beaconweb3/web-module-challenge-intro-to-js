@@ -152,9 +152,30 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
         So, on this one test, the weight would be 4 pounds, and the age would be 1 years old. It's expecting your function to return a decimal number of 0.2
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
-}
+function hungryDog(animalAge, animalWeight){
+  //Puppy if Statement
+  if (animalAge <= (2/12)) {
+    return 'You have a Puppy that should not yet be eating dog food.';
+  } else if (animalAge <= (4/12)) {
+    return animalWeight*.1;
+  } else if (animalAge < (8/12)) {
+    return animalWeight*.05;
+  } else if (animalAge <= 1) {
+    return animalWeight*.04;
+  } else if (animalAge < 6){
+    return animalWeight*.05;
+  } else if (animalAge < 11) {
+    return animalWeight*.04;
+  } else if (animalAge < 16) {
+    return animalWeight*.03;
+  } else  {
+    return animalWeight*.02;
+  } 
+  }
+let aAge = 1;
+let aWeight = 15;
+console.log(hungryDog(aAge, aWeight));
+
 
 
 
@@ -178,11 +199,33 @@ Use the game function below to do the following:
 
 RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
 */
-
-function game(user, computer){
-  /*add your code here*/
+let computerChoice = Math.random();
+if (computerChoice < .34) {
+  computerChoice = 'paper';
+} else if (computerChoice > .34 && computerChoice < .67) {
+  computerChoice = 'rock';
+} else {
+  computerChoice = 'scissors';
 }
 
+/*let userChoice =  prompt("Choose rock, paper, or scissors");
+if (userChoice === 'rock' || userChoice === 'paper' || userChoice === 'scissors') {
+  console.log(game(userChoice, computerChoice));
+}  else {
+  return "Please try again and check for syntax."
+}*/
+let userChoice = 'rock';
+function game(user, computer){
+if (user === computer) { 
+  return 'Tie: Try Again';
+} else if ((user ==='scissors' && computer === 'paper') || (user ==='paper' && computer === 'rock') || (user ==='rock' && computer === 'scissors')) {
+  return 'You Win';
+} else { 
+  return 'Computer Wins';
+}
+}
+  console.log(game(userChoice, computerChoice));
+ 
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
