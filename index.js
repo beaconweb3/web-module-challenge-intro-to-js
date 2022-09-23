@@ -238,12 +238,16 @@ Using the miles function below do the following:
 2. Convert the number of kiolmeters received to miles
 3. Return the number of miles
 */
+let userInput = 10;
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(numKilo){
+  let numMiles = numKilo*.62137;
+  return numMiles; 
+//return (numKilo + ' kilometers is the equivalent of ' + numMiles + ' in miles.');
+  
 }
 
-
+console.log(miles(userInput));
 
 //Task 5b - Centimeters to Feet
 /*
@@ -252,10 +256,14 @@ Using the feet function below do the following:
 2. Convert the number of cm to feet
 3. Return number of feet
 */
-
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(numCm){
+  let numFeet = numCm*.0328084;
+  return numFeet; 
 }
+
+console.log(feet(userInput));
+  
+
 
 
 
@@ -272,12 +280,20 @@ Using the annoyingSong function below do the following:
 3. Outside of the function, Make a loop that invokes annoying song with a number that decreases until it gets to 1 bottle left. 
 4. Each time the annoyingSong is run from this loop, it should console.log the string that was returned. 
 */
+let starterNum = 10;
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+function annoyingSong(BoB){
+  while (BoB > 0) {
+    let message = BoB +' bottles of soda on the wall ' + BoB + ' bottles of soda, take one down pass it around ' + (BoB - 1) + ' bottles of soda on the Wall.'
+   
+    console.log(message);
+    BoB -= 1;
+
+  }
+  return BoB +' bottles of soda on the wall ' + BoB + ' bottles of soda, take one down pass it around ' + (BoB - 1) + ' bottles of soda on the Wall.';
 }
 
-
+console.log(annoyingSong(starterNum));
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 //Grade Calculator
@@ -293,11 +309,21 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(pts){
+  if (pts > 89) {
+    return 'you got an A';
+  } else if (pts > 79 && pts < 90) {
+    return 'you got an B';
+  } else if (pts > 69 && pts < 80) {
+    return 'you got an C';
+  } else if (pts > 59 && pts < 70) {
+    return 'you got an D';
+  } else {
+    return 'you got an F';
+  }
 }
 
-
+console.log(grade(userInput));
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
